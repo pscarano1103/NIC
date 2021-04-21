@@ -178,11 +178,13 @@ header {
     height: 65px;
     background: var(--branco);
     color: var(--verde);
+    transition: 0.5s;
 }
 
 #rodape a {
     text-decoration: none;
 }
+
 
 /*FOOTER*/
 footer .container-fluid{

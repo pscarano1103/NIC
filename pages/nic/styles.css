@@ -12,10 +12,14 @@
 #banner .imgarea {
     text-align: center;
     padding-bottom: 20px;
+
+}
+
+#banner .imgarea img {
+    width: 168px;
 }
 #banner .titulo h1 { 
     font-weight: 900;
-    margin-bottom: 60px; 
     text-transform: uppercase;
     text-align:center;
 }
