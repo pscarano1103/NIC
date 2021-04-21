@@ -2,22 +2,26 @@
 .navbar-collapse {
     align-self: end;
 }
-/*BANNER SERVIÇOS*/
+/*BANNER contato*/
 #banner .banner-content {
     margin-left: 0;
     margin-bottom: 0;
-    text-align: center;
     padding: 100px;
+}
+
+#banner .imgarea {
+    text-align: center;
+    padding-bottom: 20px;
 }
 #banner .titulo h1 { 
     font-weight: 900;
-    margin-top: 40px;
     margin-bottom: 60px; 
-    margin-left: 70px;
     text-transform: uppercase;
+    text-align:center;
 }
 
 #logo {
     width: 215px;
     margin-top: -15px;
 }
+
