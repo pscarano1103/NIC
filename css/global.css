@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-header {
-    background: var(--roxo);
-}
-
 body, html{
     font-family: 'Montserrat', sans-serif;
 }
@@ -102,7 +98,7 @@ body, html{
     height: 400px;
 }
 
-#rodape h1 {
+#rodape .titulo {
     margin-top: 113px;
     font-style: normal;
     font-weight: 900;
@@ -114,7 +110,7 @@ body, html{
 }
 
 
-#rodape .underbar-rodape {
+#rodape .underbar {
     background: var(--roxo);
     width: 477px;
     height: 14px;
@@ -153,11 +149,6 @@ body, html{
 }
 
 /*FOOTER*/
-
-footer {
-    
-}
-
 footer .container-fluid{
     padding: 0;
 }
