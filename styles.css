@@ -9,10 +9,6 @@ Version: 1.0
 
 @import url(./css/main.css);
 
-header {
-    background: var(--roxo);
-}
-
 /*Elementos*/
 
 main #rectangleGreen {
@@ -42,37 +38,7 @@ main #patternDotted {
     z-index: 1;
 }
 
-/* Banner */
 
-.banner-content {
-    padding: 0;
-    width: 615px;
-    margin-left: 50px;
-    margin-bottom: 53px;
-}
-
-.banner-content h1 {
-    flex: 1;
-    margin-bottom: 16px;
-    margin-top: auto;
-    width: 203px;
-    height: 24px;
-    font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height */
-    letter-spacing: 0.3em;
-    color: #6FBACF;
-} 
-
-.banner-content p {
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 49px;
-    color: #FFFFFF;
-    text-align: left;
-}
 
 /* Sticker */
 

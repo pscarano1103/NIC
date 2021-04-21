@@ -1,0 +1,19 @@
+@import url(../../css/main.css);
+
+#banner .banner-content {
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 100px;
+}
+#banner .titulo h1 { 
+    font-weight: 900;
+    margin-top: 40px;
+    margin-bottom: 60px; 
+    margin-left: 70px;
+    text-transform: uppercase;
+}
+
+#logo {
+    width: 215px;
+}
