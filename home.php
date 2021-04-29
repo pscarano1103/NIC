@@ -1,3 +1,7 @@
+<?php
+// Template Name: Home
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +9,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nic - Designer | HOME</title>
+    <title><?php bloginfo('name'); ?></title>
 
     <!--css-->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+  
 
 
     <!-- fonts -->
@@ -25,17 +30,19 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!--header Wordpress-->
+    <?php wp_head(); ?>
+    <!--fecha header Wordpress-->
 </head>
 
-<body>
-    
-    
+<body>   
     <header>
         
         <!--menu-->
-        <div class="container d-flex justify-content-end">
+        <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
                     <ul class="menu navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" id="ativo" href="./index.html">Home</a>
@@ -59,23 +66,21 @@
                 </div>
             </nav>
         </div>
-        <!--/menu-->
-
         <!--banner-->
         <div id="banner">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 banner-content titulo">                            
 
-                            <img src="./assets/elementos/elipse.svg" id="circle1" alt="">
-                            <img src="./assets/elementos/elipse.svg" id="circle2" alt="">
-                            <img src="./assets/elementos/dotted.svg" id="dotted1" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/elipse.svg" id="circle1" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/elipse.svg" id="circle2" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted1" alt="">
                             <p>O QUE FAZEMOS</p>
                             <h1>
                                 Unimos visão & estratégia para melhorar relações<br> entre marcas<br> & pessoas
                             </h1>
-                            <img src="./assets/elementos/dotted.svg" id="dotted2" alt="">
-                            <img src="./assets/elementos/dotted.svg" id="dotted3" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted2" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted3" alt="">
 
                     </div>
                 </div>
@@ -105,8 +110,8 @@
         
 
         <div id="podemos">
-            <img src="./assets/elementos/rectangleGreen.svg" alt="" id="rectangleGreen">
-            <img src="./assets/elementos/rectangleBlue.svg" alt="" id="rectangleBlue">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/rectangleGreen.svg" alt="" id="rectangleGreen">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/rectangleBlue.svg" alt="" id="rectangleBlue">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 titulo">
@@ -138,7 +143,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/camera.svg" alt="maquina_digital"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/camera.svg" alt="maquina_digital"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -148,7 +153,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/caneta.svg" alt="caneta"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/caneta.svg" alt="caneta"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -158,7 +163,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/vetor.svg" alt="vetor"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vetor.svg" alt="vetor"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -168,7 +173,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/arroba.svg" alt="arroba"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arroba.svg" alt="arroba"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -183,7 +188,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/camera.svg" alt="maquina_digital"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/camera.svg" alt="maquina_digital"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -193,7 +198,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/caneta.svg" alt="caneta"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/caneta.svg" alt="caneta"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -203,7 +208,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/vetor.svg" alt="vetor"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vetor.svg" alt="vetor"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -213,7 +218,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/arroba.svg" alt="arroba"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arroba.svg" alt="arroba"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -228,7 +233,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/camera.svg" alt="maquina_digital"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/camera.svg" alt="maquina_digital"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -238,7 +243,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/caneta.svg" alt="caneta"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/caneta.svg" alt="caneta"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -248,7 +253,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/vetor.svg" alt="vetor"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vetor.svg" alt="vetor"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-3" id="item-carrosel">
@@ -258,7 +263,7 @@
                                             <p>
                                                 Precisa de identidade de visual para seu projeto ?
                                             </p>
-                                            <div class="img-area"><img src="./assets/arroba.svg" alt="arroba"></div>
+                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arroba.svg" alt="arroba"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -271,8 +276,8 @@
             </div>
         </div>
 
-        <img src="./assets/elementos/DotPattern.svg" alt="" id="patternDotted">
-        <img src="./assets/elementos/circle.svg" alt="" id="circle">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/DotPattern.svg" alt="" id="patternDotted">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/circle.svg" alt="" id="circle">
         <div class="projetos">
             <div class="container">
                 <div class="row">
@@ -285,21 +290,21 @@
                 </div>
                 <div class="row">
                     <div class="img-area imagem-projetos imagem-position-principal">
-                        <img src="./assets/projetos/Drives.png" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/projetos/Drives.png" alt="">
                     </div>
                     <div class="img-area imagem-projetos imagem-position-segunda">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
                         <button>Identidade visual</button>
                         <a href="#">Confira mais sobre esse projeto -></a>
                         <div class="color-overlay"></div>
-                        <img src="./assets/projetos/EMBALAGEM2.png" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/projetos/EMBALAGEM2.png" alt="">
                     </div>
                     <div class="img-area imagem-projetos imagem-position-terceira">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
                         <button>Identidade visual</button>
                         <a href="#">Confira mais sobre esse projeto -></a>
                         <div class="color-overlay"></div>
-                        <img src="./assets/projetos/MANUAL 1.png" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/projetos/MANUAL 1.png" alt="">
                     </div>
                 </div>
                 <div class="row">
@@ -360,10 +365,10 @@
                                 <p class="card-text">Bunch of components will help you to prototype, design & build much faster.</p>
 
                                 <div class="visualizacao">
-                                    <img class="viewsIcon" src="./assets/cardBlog/viewIcon.svg" alt="">
+                                    <img class="viewsIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/cardBlog/viewIcon.svg" alt="">
                                     <span>783</span>
 
-                                    <img class="commentsIcon" src="./assets/cardBlog/commentIcon.svg" alt="">
+                                    <img class="commentsIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/cardBlog/commentIcon.svg" alt="">
                                     <span>46</span>
 
                                     <a href="#">leia mais</a>
@@ -383,10 +388,10 @@
                                 <p class="card-text">Bunch of components will help you to prototype, design & build much faster.</p>
 
                                 <div class="visualizacao">
-                                    <img class="viewsIcon" src="./assets/cardBlog/viewIcon.svg" alt="">
+                                    <img class="viewsIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/cardBlog/viewIcon.svg" alt="">
                                     <span>783</span>
 
-                                    <img class="commentsIcon" src="./assets/cardBlog/commentIcon.svg" alt="">
+                                    <img class="commentsIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/cardBlog/commentIcon.svg" alt="">
                                     <span>46</span>
 
                                     <a href="#">leia mais</a>
@@ -406,10 +411,10 @@
                                 <p class="card-text">Bunch of components will help you to prototype, design & build much faster.</p>
                                 
                                 <div class="visualizacao">
-                                    <img class="viewsIcon" src="./assets/cardBlog/viewIcon.svg" alt="">
+                                    <img class="viewsIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/cardBlog/viewIcon.svg" alt="">
                                     <span>783</span>
 
-                                    <img class="commentsIcon" src="./assets/cardBlog/commentIcon.svg" alt="">
+                                    <img class="commentsIcon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/cardBlog/commentIcon.svg" alt="">
                                     <span>46</span>
 
                                     <a href="#">leia mais</a>
@@ -452,62 +457,4 @@
                     </div>
                 </div>
             </div>
-            <div class="container navfooter">
-                <nav class="navbar navbar-expand-lg">
-
-                    <a class="navbar-brand" href="#">
-                        <img src="./assets/logo/logo-roxo-redu.svg" alt="Logo">
-                    </a>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Serviços</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Portifólio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Loja</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div id="social-media">
-                        <a href="">
-                            <img src="./assets/social-media/face.svg" alt="facebook">
-                        </a>
-                        <a href="">
-                            <img src="./assets/social-media/insta.svg" alt="instagram">
-                        </a>
-                        <a href="">
-                            <img src="./assets/social-media/twitter.svg" alt="twitter">
-                        </a>
-                        <a href="">
-                            <img src="./assets/social-media/pinter.svg" alt="pinterest">
-                        </a>
-                        <a href="">
-                            <img src="./assets/social-media/social.svg" alt="social">
-                        </a>
-                    </div>
-                </nav>
-
-            </div>
-            
-
-            
-        </div>
-    </footer>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-        crossorigin="anonymous"></script>
-    <script src="./js/bootstrap.min.js"></script>
-</body>
-
-</html>
+<?php get_footer(); ?>
