@@ -136,141 +136,27 @@
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>01</h1>
-                                            <h3>fotografia</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/camera.svg" alt="maquina_digital"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>02</h1>
-                                            <h3>papelaria</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/caneta.svg" alt="caneta"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>03</h1>
-                                            <h3>identidade visual</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vetor.svg" alt="vetor"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>04</h1>
-                                            <h3>midias digital</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arroba.svg" alt="arroba"></div>
-                                        </div>
+
+                            <?php if(have_rows('pagina_carousel')): while(have_rows('pagina_carousel')) : the_row(); ?>
+                                <div class="carousel-item active">
+                                    <div class="row justify-content-center">                                    
+                                        
+                                        <?php if(have_rows('item_carousel')): while(have_rows('item_carousel')) : the_row(); ?>
+                                            <div class="col-md-3" id="item-carrosel">
+                                                <div class="content">
+                                                    <h1><?php the_sub_field('numero_item') ?></h1>
+                                                    <h3><?php the_sub_field('nome_servico') ?></h3>
+                                                    <p>
+                                                        <?php the_sub_field('texto_item') ?>
+                                                    </p>
+                                                    <div class="img-area">
+                                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/camera.svg" alt="maquina_digital"></div>
+                                                </div>
+                                            </div>
+                                        <?php endwhile; else : endif; ?>                                     
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>01</h1>
-                                            <h3>fotografia</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/camera.svg" alt="maquina_digital"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>02</h1>
-                                            <h3>papelaria</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/caneta.svg" alt="caneta"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>03</h1>
-                                            <h3>identidade visual</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vetor.svg" alt="vetor"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>04</h1>
-                                            <h3>midias digital</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arroba.svg" alt="arroba"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>01</h1>
-                                            <h3>fotografia</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/camera.svg" alt="maquina_digital"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>02</h1>
-                                            <h3>papelaria</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/caneta.svg" alt="caneta"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>03</h1>
-                                            <h3>identidade visual</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vetor.svg" alt="vetor"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3" id="item-carrosel">
-                                        <div class="content">
-                                            <h1>04</h1>
-                                            <h3>midias digital</h3>
-                                            <p>
-                                                Precisa de identidade de visual para seu projeto ?
-                                            </p>
-                                            <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arroba.svg" alt="arroba"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <?php endwhile; else : endif; ?>
                         </div>
                     </div>
                 </div>
@@ -291,23 +177,25 @@
                     </div>
                 </div>
                 <div class="row">
+                <?php if(have_rows('imagens_sessao_projetos')): while(have_rows('imagens_sessao_projetos')) : the_row(); ?>
                     <div class="img-area imagem-projetos imagem-position-principal">
-                        <img src="<?php the_field('imagem_projeto_destaque') ?>" alt="<?php the_field('descricao_foto_projeto_principal') ?>">
+                        <img src="<?php the_sub_field('imagem_projeto_um') ?>" alt="">
                     </div>
                     <div class="img-area imagem-projetos imagem-position-segunda">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
                         <button>Identidade visual</button>
-                        <a href="#">Confira mais sobre esse projeto -></a>
+                        <a href="/portifolio">Confira mais sobre esse projeto -></a>
                         <div class="color-overlay"></div>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/projetos/EMBALAGEM2.png" alt="">
+                        <img src="<?php the_sub_field('imagem_projeto_dois') ?>" alt="">
                     </div>
                     <div class="img-area imagem-projetos imagem-position-terceira">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
                         <button>Identidade visual</button>
                         <a href="#">Confira mais sobre esse projeto -></a>
                         <div class="color-overlay"></div>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/projetos/MANUAL 1.png" alt="">
+                        <img src="<?php the_sub_field('imagem_projeto_tres') ?>" alt="">
                     </div>
+                <?php endwhile; else : endif; ?>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
