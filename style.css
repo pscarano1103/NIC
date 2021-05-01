@@ -10,3 +10,7 @@ Version: 1.0
 @import url(./css/page-home.css);
 
 
+#logo {
+    width: 215px;
+    margin-top: -15px;
+}

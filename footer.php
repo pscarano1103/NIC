@@ -1,23 +1,23 @@
 <div class="container navfooter">
                 <nav class="navbar navbar-expand-lg">
 
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo/logo-roxo-redu.svg" alt="Logo">
                     </a>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Serviços</a>
+                                <a class="nav-link" href="/servicos">Serviços</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Portifólio</a>
+                                <a class="nav-link" href="/portifolio">Portifólio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Loja</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
+                                <a class="nav-link" href="/contato">Contato</a>
                             </li>
                         </ul>
                     </div>

@@ -36,6 +36,8 @@
     <!--fecha header Wordpress-->
 </head>
 
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <body>   
     <header>
         
@@ -45,22 +47,22 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
                     <ul class="menu navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" id="ativo" href="./index.html">Home</a>
+                            <a class="nav-link" id="ativo" href="/"><?php the_title(); ?></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/nic/nic.html">Nic</a>
+                            <a class="nav-link" href="/sobre">Nic</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/serviços/service.html ">Serviços</a>
+                            <a class="nav-link" href="/servicos">Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/portifolio/portifolio.html">Portifólio</a>
+                            <a class="nav-link" href="/portifolio">Portifólio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Loja</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/contato/contact.html">Contato</a>
+                            <a class="nav-link" href="/contato">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -75,9 +77,9 @@
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/elipse.svg" id="circle1" alt="">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/elipse.svg" id="circle2" alt="">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted1" alt="">
-                            <p>O QUE FAZEMOS</p>
+                            <p><?php the_field('titulo_banner') ?></p>
                             <h1>
-                                Unimos visão & estratégia para melhorar relações<br> entre marcas<br> & pessoas
+                                <?php the_field('conteudo_banner') ?>
                             </h1>
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted2" alt="">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted3" alt="">
@@ -116,7 +118,7 @@
                 <div class="row">
                     <div class="col-md-12 titulo">
                         <h1>
-                            O QUE PODEMOS FAZER POR VOCÊ
+                            <?php the_field('podemos') ?>
                             <div class="underbar"></div>
                         </h1>
                     </div>
@@ -283,14 +285,14 @@
                 <div class="row">
                     <div class="col-md-12 titulo">
                         <h1>
-                            projetos
+                            <?php the_field('projetos') ?>
                             <div class="underbar"></div>
                         </h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="img-area imagem-projetos imagem-position-principal">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/projetos/Drives.png" alt="">
+                        <img src="<?php the_field('imagem_projeto_destaque') ?>" alt="<?php the_field('descricao_foto_projeto_principal') ?>">
                     </div>
                     <div class="img-area imagem-projetos imagem-position-segunda">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
@@ -320,7 +322,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 titulo">
                         <h1>
-                            com a palavra nossos clientes
+                            <?php the_field('clientes') ?>
                             <div class="underbar"></div>
                         </h1>
                     </div>
@@ -349,7 +351,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 titulo">
                         <h1>
-                            nosso blog
+                            <?php the_field('blog') ?>
                             <div class="underbar"></div>
                         </h1>
                     </div>
@@ -457,4 +459,5 @@
                     </div>
                 </div>
             </div>
+<?php endwhile; else: endif; ?>
 <?php get_footer(); ?>
