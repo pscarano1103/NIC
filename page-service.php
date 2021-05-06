@@ -1,3 +1,6 @@
+<?php
+// Template Name: Serviços
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +8,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nic - Designer</title>
+    <title><?php bloginfo('name'); ?></title>
 
     <!--css-->
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/page-service.css">
+  
 
 
     <!-- fonts -->
@@ -26,45 +29,13 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!--header Wordpress-->
+    <?php wp_head(); ?>
+    <!--fecha header Wordpress-->
 </head>
 
-<body>
-    
-    
-    <header>
-        
-        <!--menu-->
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                
-                <a class="navbar-brand" href="#">
-                    <img id="logo" src="../../assets/logo/logo-branco.svg" alt="Logo">
-                </a>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-                    <ul class="menu navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../nic/nic.html">Nic</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="ativo" href="./service.html">Serviços</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../portifolio/portifolio.html">Portifólio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Loja</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contato/contact.html">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <!--/menu-->
+<?php get_header(); ?>
 
         <!--banner-->
         <div id="banner">
@@ -72,12 +43,12 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 titulo banner-content">                            
 
-                            <img src="../../assets/elementos/elipse.svg" id="circle1" alt="">
-                            <img src="../../assets/elementos/elipse.svg" id="circle2" alt="">
-                            <img src="../../assets/elementos/dotted.svg" id="dotted1" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/elipse.svg" id="circle1" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/elipse.svg" id="circle2" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted1" alt="">
                             <h1>Serviços</h1>
-                            <img src="../../assets/elementos/dotted.svg" id="dotted2" alt="">
-                            <img src="../../assets/elementos/dotted.svg" id="dotted3" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted2" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/elementos/dotted.svg" id="dotted3" alt="">
 
                     </div>
                 </div>
@@ -108,7 +79,7 @@
                                     <p>
                                         Precisa de identidade de visual para seu projeto ?
                                     </p>
-                                    <div class="img-area"><img src="../../assets/camera.svg" alt="maquina_digital"></div>
+                                    <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/camera.svg" alt="maquina_digital"></div>
                                 </div>
                             </div>
                         </a>
@@ -123,7 +94,7 @@
                                     <p>
                                         Precisa de identidade de visual para seu projeto ?
                                     </p>
-                                    <div class="img-area"><img src="../../assets/caneta.svg" alt="maquina_digital"></div>
+                                    <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/caneta.svg" alt="maquina_digital"></div>
                                 </div>
                             </div>
                         </a>
@@ -138,7 +109,7 @@
                                     <p>
                                         Precisa de identidade de visual para seu projeto ?
                                     </p>
-                                    <div class="img-area"><img src="../../assets/mentoria.svg" alt="maquina_digital"></div>
+                                    <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mentoria.svg" alt="maquina_digital"></div>
                                 </div>
                             </div>
                         </a>
@@ -155,7 +126,7 @@
                                     <p>
                                         Precisa de identidade de visual para seu projeto ?
                                     </p>
-                                    <div class="img-area"><img src="../../assets/arroba.svg" alt="maquina_digital"></div>
+                                    <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/arroba.svg" alt="maquina_digital"></div>
                                 </div>
                             </div>
                         </a>
@@ -170,7 +141,7 @@
                                     <p>
                                         Precisa de identidade de visual para seu projeto ?
                                     </p>
-                                    <div class="img-area"><img src="../../assets/marketing.svg" alt="maquina_digital"></div>
+                                    <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/marketing.svg" alt="maquina_digital"></div>
                                 </div>
                             </div>
                         </a>
@@ -185,7 +156,7 @@
                                     <p>
                                         Precisa de identidade de visual para seu projeto ?
                                     </p>
-                                    <div class="img-area"><img src="../../assets/vetor.svg" alt="maquina_digital"></div>
+                                    <div class="img-area"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vetor.svg" alt="maquina_digital"></div>
                                 </div>
                             </div>
                         </a>
@@ -226,62 +197,4 @@
                     </div>
                 </div>
             </div>
-            <div class="container navfooter">
-                <nav class="navbar navbar-expand-lg">
-
-                    <a class="navbar-brand" href="#">
-                        <img src="../../assets/logo/logo-roxo-redu.svg" alt="Logo">
-                    </a>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Serviços</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Portifólio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Loja</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div id="social-media">
-                        <a href="">
-                            <img src="../../assets/social-media/face.svg" alt="facebook">
-                        </a>
-                        <a href="">
-                            <img src="../../assets/social-media/insta.svg" alt="instagram">
-                        </a>
-                        <a href="">
-                            <img src="../../assets/social-media/twitter.svg" alt="twitter">
-                        </a>
-                        <a href="">
-                            <img src="../../assets/social-media/pinter.svg" alt="pinterest">
-                        </a>
-                        <a href="">
-                            <img src="../../assets/social-media/social.svg" alt="social">
-                        </a>
-                    </div>
-                </nav>
-
-            </div>
-            
-
-            
-        </div>
-    </footer>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-        crossorigin="anonymous"></script>
-    <script src="./js/bootstrap.min.js"></script>
-</body>
-
-</html>
+<?php get_footer(); ?>

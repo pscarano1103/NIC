@@ -1,4 +1,5 @@
-@import url(../../css/main.css);
+@import url(../css/main.css);
+
 .navbar-collapse {
     align-self: end;
 }
@@ -16,16 +17,15 @@
 }
 
 #banner .imgarea img {
-    width: 157px;
+    width: 168px;
 }
-
 #banner .titulo h1 { 
-    font-weight: 900; 
+    font-weight: 900;
     text-transform: uppercase;
     text-align:center;
 }
 
-#logo {
+header .container .navbar-brand #logo {
     width: 215px;
     margin-top: -15px;
 }
