@@ -1,0 +1,115 @@
+@import url(./main.css);
+.navbar-collapse {
+    align-self: end;
+}
+/*BANNER SERVIÇOS*/
+#banner .banner-content {
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 100px;
+}
+#banner .titulo h1 { 
+    font-weight: 900;
+    margin-top: 40px;
+    margin-bottom: 60px; 
+    margin-left: 70px;
+    text-transform: uppercase;
+}
+
+#logo {
+    width: 215px;
+    margin-top: -15px;
+}
+
+
+/*conteúdo*/
+
+.service {
+    padding-top: 140px;
+    padding-bottom: 60px;
+}
+
+.service .titulo h1 {
+    color: var(--darkblue);
+}
+
+.service .titulo .underbar {
+    width: 380px;
+    margin-top: -22px;
+}
+
+/*estilização do card*/
+
+.service .card {
+    margin-top: 80px;
+    width: 280px;
+    height: 298px;
+    border: 1px solid var(--verde);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.service .card .content h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 88px;
+    color: var(--branco);
+    /* identical to box height */
+    
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: var(--verde);
+    opacity: 0.1;
+    transition: 0.5s;
+      
+}
+
+.service .card .content h3 {
+    margin-left: 15px;
+    margin-top: -50px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 32px;
+    color: var(--branco);
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: var(--verde);
+    transition: 0.5s;
+}
+
+.service .card .content p {
+    margin: 50px 15px 25px 15px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--cinza);
+    
+}
+
+.service .card .content .img-area img {
+    width: 78px;
+    height: 53px;
+    
+    margin-left: 16px;
+    
+}
+
+.service a {
+    text-decoration: none;
+}
+
+.service a:hover .card {
+    background: var(--roxo);
+    border: 1px solid var(--roxo);
+}
+
+.service a:hover .card .content h3, .service a:hover .card .content h1 {
+    color: transparent;
+    -webkit-text-stroke-color: var(--branco);
+}
+
+
