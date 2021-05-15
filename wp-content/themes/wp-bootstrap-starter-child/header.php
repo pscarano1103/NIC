@@ -64,7 +64,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
 
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="/nic">
                     <img id="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo/logo-branco.svg" alt="Logo">
                 </a>
 

@@ -3,7 +3,7 @@
 
 // Enqueue needed scripts
 function needed_styles_and_scripts_enqueue() {
-    
+    wp_enqueue_script('carousel', get_template_directory_uri() . '/assets/js/crousel.js' );
 
     if (is_page_template('page-contato.php')) {
         wp_enqueue_style( 'page-contato', get_template_directory_uri() . '/assets/css/page-contato.css' );
@@ -17,6 +17,10 @@ function needed_styles_and_scripts_enqueue() {
         wp_enqueue_style( 'page-service', get_template_directory_uri() . '/assets/css/page-service.css' );
     }
 
+    if ( is_single() && 'servicos' == get_post_type() ){
+        wp_enqueue_style( 'page-service-sub', get_template_directory_uri() . '/assets/css/page-service-sub.css' );
+    }
+
     if (is_page_template('page-portifolio.php')) {
         wp_enqueue_style( 'page-portifolio', get_template_directory_uri() . '/assets/css/page-portifolio.css' );
     }
@@ -25,7 +29,8 @@ function needed_styles_and_scripts_enqueue() {
         wp_enqueue_style( 'page-sobre', get_template_directory_uri() . '/assets/css/page-sobre.css' );
     }
     
-
+    
+    
 }
 
 add_action( 'wp_enqueue_scripts', 'needed_styles_and_scripts_enqueue' );

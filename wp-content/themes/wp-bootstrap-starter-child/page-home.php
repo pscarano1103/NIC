@@ -64,36 +64,89 @@
         <div id="carousel">
             <div class="container">
                 <div class="col-md-12">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
 
-                            <?php if(have_rows('pagina_carousel')): while(have_rows('pagina_carousel')) : the_row(); ?>
-                                <div class="carousel-item active">
+                    <?php 
+                        /**
+                         * Setup query to show the ‘services’ post type with ‘8’ posts.
+                         * Output the title with an excerpt.
+                         */
+                        $args = array(  
+                            'post_type' => 'servicos',
+                            'post_status' => 'publish'
+                        );
+
+                        $loop = new WP_Query( $args ); 
+                        
+                        $contador = 0;
+                        $buttons = "";
+                        $carouselItem = "";
+
+                        while ( $loop->have_posts() ) : $loop->the_post();
+                            if ($contador == 0) {
+                                $active = 'class="active" aria-current="true"';
+                                $activeCarousel = 'active';
+                            } else {
+                                $active = "";
+                                $activeCarousel = "";
+                            }
+                            
+                            $numeroItem = get_field('numero_item');
+                            $nome_servico = get_field('nome_servico');
+                            $texto_item = get_field('texto_item');
+                            $imagem_item = get_field('imagem_item');
+                            $link = get_permalink();
+
+                            $carouselItem .= sprintf('<div class="carousel-item %s">
                                     <div class="row justify-content-center">                                    
-                                        
-                                        <?php if(have_rows('item_carousel')): while(have_rows('item_carousel')) : the_row(); ?>
                                             <div class="col-md-3" id="item-carrosel">
                                                 <div class="content">
-                                                    <h1><?php the_sub_field('numero_item') ?></h1>
-                                                    <h3><?php the_sub_field('nome_servico') ?></h3>
+                                                    <h1>%s</h1>
+                                                    <h3>%s</h3>
                                                     <p>
-                                                        <?php the_sub_field('texto_item') ?>
+                                                        %s
                                                     </p>
                                                     <div class="img-area">
-                                                        <img src="<?php the_sub_field('imagem_item') ?>" alt="maquina_digital"></div>
+                                                        <a href="%s">Saiba mais</a>
+                                                        <img src="%s" alt="maquina_digital"></div>
                                                 </div>
                                             </div>
-                                        <?php endwhile; else : endif; ?>                                     
                                     </div>
-                                </div>
-                            <?php endwhile; else : endif; ?>
+                                </div>', $activeCarousel, $numeroItem, $nome_servico, $texto_item, $link, $imagem_item);
+
+                            $buttons .= '<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="'.$contador.'" '.$active.' aria-label="Slide 2"></button>';
+                            $contador++;
+
+                        endwhile;
+
+                        wp_reset_postdata(); 
+                    ?>
+                    
+                   <!-- 
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <?php echo $buttons; ?>
+                        </div>
+                        <div class="carousel-inner">
+                            <?php echo $carouselItem ?>
                         </div>
                     </div>
+                    -->
+
+
+                        <div class="owl-carousel owl-theme">
+                            <div class="item"><h4>1</h4></div>
+                            <div class="item"><h4>2</h4></div>
+                            <div class="item"><h4>3</h4></div>
+                            <div class="item"><h4>4</h4></div>
+                            <div class="item"><h4>5</h4></div>
+                            <div class="item"><h4>6</h4></div>
+                            <div class="item"><h4>7</h4></div>
+                            <div class="item"><h4>8</h4></div>
+                            <div class="item"><h4>9</h4></div>
+                            <div class="item"><h4>10</h4></div>
+                            <div class="item"><h4>11</h4></div>
+                            <div class="item"><h4>12</h4></div>
+                        </div>
                 </div>
 
             </div>

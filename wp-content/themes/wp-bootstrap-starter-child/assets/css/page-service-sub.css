@@ -111,3 +111,24 @@
     color: transparent;
     -webkit-text-stroke-color: var(--branco);
 }
+
+.service .titulo {
+    margin-top: 140px;
+}
+
+.service .container p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    text-transform: lowercase;
+    color: var(--darkblue);
+}
+
+.service #duvidas {
+
+    margin-top: 120px;
+}
+.service .dropdown button {
+    border: 1px solid var(--verde);
+}
