@@ -1,25 +1,49 @@
-<?php $home = get_page_by_title('Home'); ?>
+<?php 
+                        /**
+                         * Setup query to show the ‘services’ post type with ‘8’ posts.
+                         * Output the title with an excerpt.
+                         */
+                        $args = array(  
+                            'post_type' => 'servicos',
+                            'post_status' => 'publish'
+                        );
 
-<?php if(have_rows('pagina_carousel', $home)): while(have_rows('pagina_carousel', $home)) : the_row(); ?>
-    <div class="row justify-content-center">
-        
-        <?php if(have_rows('item_carousel', $home)): while(have_rows('item_carousel', $home)) : the_row(); ?>
-            <div class="col-md-3">
-                <a href="/nic/sub-servico">
-                    <div class="card">
-                        <div class="content">
-                            <h1><?php the_sub_field('numero_item', $home) ?></h1>
-                            <h3><?php the_sub_field('nome_servico', $home) ?></h3>
-                            <p>
-                                <?php the_sub_field('texto_item', $home) ?>
-                            </p>
-                            <div class="img-area">
-                                <img src="<?php the_sub_field('imagem_item', $home) ?>" alt="foto-servico">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        <?php endwhile; else : endif; ?>  
-    </div>
-<?php endwhile; else : endif; ?>
+                        $loop = new WP_Query( $args ); 
+                        
+                        $contador = 0;
+                        $card = "";
+
+                        while ( $loop->have_posts() ) : $loop->the_post();
+                            
+                            $numeroItem = get_field('numero_item');
+                            $nome_servico = get_field('nome_servico');
+                            $texto_item = get_field('texto_item');
+                            $imagem_item = get_field('imagem_item');
+                            $link = get_permalink();
+
+                            $card .= sprintf('<div class="col-md-3">
+                                <a href="%s">
+                                    <div class="card">
+                                    <div class="content">
+                                        <h1>%s</h1>
+                                        <h3>%s</h3>
+                                        <p>
+                                            %s
+                                        </p>
+                                        <div class="img-area">
+                                            <img src="%s" alt="foto-servico">
+                                        </div>
+                                    </div>
+                                    </div>
+                                </a>
+                            </div>', $link, $numeroItem, $nome_servico, $texto_item, $imagem_item);
+
+                            $contador++;
+
+                        endwhile;
+
+                        wp_reset_postdata(); 
+?>
+<div class="row justify-content-center">
+    <?php echo $card ?>
+</div>

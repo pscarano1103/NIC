@@ -65,88 +65,54 @@
             <div class="container">
                 <div class="col-md-12">
 
-                    <?php 
-                        /**
-                         * Setup query to show the ‘services’ post type with ‘8’ posts.
-                         * Output the title with an excerpt.
-                         */
-                        $args = array(  
-                            'post_type' => 'servicos',
-                            'post_status' => 'publish'
-                        );
-
-                        $loop = new WP_Query( $args ); 
-                        
-                        $contador = 0;
-                        $buttons = "";
-                        $carouselItem = "";
-
-                        while ( $loop->have_posts() ) : $loop->the_post();
-                            if ($contador == 0) {
-                                $active = 'class="active" aria-current="true"';
-                                $activeCarousel = 'active';
-                            } else {
-                                $active = "";
-                                $activeCarousel = "";
-                            }
-                            
-                            $numeroItem = get_field('numero_item');
-                            $nome_servico = get_field('nome_servico');
-                            $texto_item = get_field('texto_item');
-                            $imagem_item = get_field('imagem_item');
-                            $link = get_permalink();
-
-                            $carouselItem .= sprintf('<div class="carousel-item %s">
-                                    <div class="row justify-content-center">                                    
-                                            <div class="col-md-3" id="item-carrosel">
-                                                <div class="content">
-                                                    <h1>%s</h1>
-                                                    <h3>%s</h3>
-                                                    <p>
-                                                        %s
-                                                    </p>
-                                                    <div class="img-area">
-                                                        <a href="%s">Saiba mais</a>
-                                                        <img src="%s" alt="maquina_digital"></div>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>', $activeCarousel, $numeroItem, $nome_servico, $texto_item, $link, $imagem_item);
-
-                            $buttons .= '<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="'.$contador.'" '.$active.' aria-label="Slide 2"></button>';
-                            $contador++;
-
-                        endwhile;
-
-                        wp_reset_postdata(); 
-                    ?>
                     
-                   <!-- 
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <?php echo $buttons; ?>
-                        </div>
-                        <div class="carousel-inner">
-                            <?php echo $carouselItem ?>
-                        </div>
-                    </div>
-                    -->
+                        <?php 
+                            /**
+                             * Setup query to show the ‘services’ post type with ‘8’ posts.
+                             * Output the title with an excerpt.
+                             */
+                            $args = array(  
+                                'post_type' => 'servicos',
+                                'post_status' => 'publish'
+                            );
 
+                            $loop = new WP_Query( $args ); 
+                            
+                            $contador = 0;
+                            $card = "";
 
+                            while ( $loop->have_posts() ) : $loop->the_post();
+                                
+                                $numeroItem = get_field('numero_item');
+                                $nome_servico = get_field('nome_servico');
+                                $texto_item = get_field('texto_item');
+                                $imagem_item = get_field('imagem_item');
+                                $link = get_permalink();
+
+                                $card .= sprintf('<a href="%s">
+                                        <div class="card" id="item-carrosel">
+                                        <div class="content">
+                                            <h1>%s</h1>
+                                            <h3>%s</h3>
+                                            <p>
+                                                %s
+                                            </p>
+                                            <div class="img-area">
+                                                <img src="%s" alt="foto-servico">
+                                            </div>
+                                        </div>
+                                        </div>
+                                </a>', $link, $numeroItem, $nome_servico, $texto_item, $imagem_item);
+
+                                $contador++;
+
+                            endwhile;
+
+                            wp_reset_postdata(); 
+                        ?>
                         <div class="owl-carousel owl-theme">
-                            <div class="item"><h4>1</h4></div>
-                            <div class="item"><h4>2</h4></div>
-                            <div class="item"><h4>3</h4></div>
-                            <div class="item"><h4>4</h4></div>
-                            <div class="item"><h4>5</h4></div>
-                            <div class="item"><h4>6</h4></div>
-                            <div class="item"><h4>7</h4></div>
-                            <div class="item"><h4>8</h4></div>
-                            <div class="item"><h4>9</h4></div>
-                            <div class="item"><h4>10</h4></div>
-                            <div class="item"><h4>11</h4></div>
-                            <div class="item"><h4>12</h4></div>
-                        </div>
+                            <?php echo $card ?>
+                        </div>                    
                 </div>
 
             </div>
@@ -172,14 +138,14 @@
                     <div class="img-area imagem-projetos imagem-position-segunda">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
                         <button>Identidade visual</button>
-                        <a href="/portifolio">Confira mais sobre esse projeto -></a>
+                        <a href="/nic/portfolio">Confira mais sobre esse projeto -></a>
                         <div class="color-overlay"></div>
                         <img src="<?php the_sub_field('imagem_projeto_dois') ?>" alt="">
                     </div>
                     <div class="img-area imagem-projetos imagem-position-terceira">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
                         <button>Identidade visual</button>
-                        <a href="#">Confira mais sobre esse projeto -></a>
+                        <a href="/nic/portfolio">Confira mais sobre esse projeto -></a>
                         <div class="color-overlay"></div>
                         <img src="<?php the_sub_field('imagem_projeto_tres') ?>" alt="">
                     </div>
@@ -187,7 +153,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="#" id="confira">Confira mais projetos</a>
+                        <a href="/nic/portfolio" id="confira">Confira mais projetos</a>
                     </div>
                 </div>
             </div>

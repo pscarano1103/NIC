@@ -47,7 +47,7 @@
                             <a class="nav-link" href="/nic/servicos">Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/nic/portifolio">Portifólio</a>
+                            <a class="nav-link" href="/nic/portfolio">Portfólio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Loja</a>
@@ -80,7 +80,7 @@
                             <a class="nav-link" href="/nic/servicos">Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/nic/portifolio">Portifólio</a>
+                            <a class="nav-link" href="/nic/portfolio">Portfólio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Loja</a>

@@ -85,9 +85,10 @@ main #patternDotted {
     height: 298px;
     border: 1px solid var(--verde);
     border-radius: 5px;
+    transition: 0.5s;
 }
 
-#carousel .content h1 {
+#carousel #item-carrosel .content h1 {
     font-style: normal;
     font-weight: 900;
     font-size: 72px;
@@ -102,7 +103,7 @@ main #patternDotted {
       
 }
 
-#carousel .content h3 {
+#carousel #item-carrosel .content h3 {
     margin-left: 15px;
     margin-top: -50px;
     font-style: normal;
@@ -114,7 +115,7 @@ main #patternDotted {
     -webkit-text-stroke-color: var(--verde);
 }
 
-#carousel .content p {
+#carousel #item-carrosel .content p {
     margin: 50px 15px 25px 15px;
     text-align: left;
     font-style: normal;
@@ -126,30 +127,29 @@ main #patternDotted {
 }
 
 #carousel .content .img-area img {
-    width: 55px;
+    width: 60px;
     height: 50px;
-    
     margin-left: 16px;
-    
 }
 
 
-.carousel-indicators {
-    left: 0;
-    top: auto;
-    bottom: -70px;
+#carousel button.active span {
+    background: var(--verde);
+    border: 1px solid var(--darkblue);
 }
 
-
-#carousel .carousel-indicators button {
-    width: 10px;
-    height: 10px;
-    border: 0.5px solid var(--darkblue);
-    border-radius: 50%;
+#carousel .owl-item a {
+    text-decoration: none;
 }
 
-#carousel button.active {
-    background-color: #4DBDCC;
+#carousel .owl-item a:hover .card {
+    background: var(--roxo);
+    border: 1px solid var(--roxo);
+}
+
+#carousel .owl-item a:hover #item-carrosel .content h3, #carousel .owl-item a:hover #item-carrosel .content h1 {
+    color: transparent;
+    -webkit-text-stroke-color: var(--branco);
 }
  
 /*Seção Projetos*/

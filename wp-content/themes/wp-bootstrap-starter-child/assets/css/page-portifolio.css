@@ -30,3 +30,65 @@
     margin-top: -15px;
 }
 
+/* inicio do body */
+
+.portfolio {
+    padding-top: 140px;
+    padding-bottom: 60px;
+}
+
+.portfolio .titulo h1 {
+    color: var(--darkblue);
+}
+
+.portfolio .titulo .underbar {
+    width: 380px;
+    margin-top: -22px;
+}
+
+
+
+.portfolio .imagem-projetos {
+    width: 387px;
+    height: 414px;
+    padding: 0;
+    margin-top: 80px;
+    contain: content;
+}
+
+.portfolio .imagem-projetos h3 {
+    width: 320px;
+    height: 180px;
+    position: absolute;
+    top: 32px;
+    left: 33px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 45px;
+    color: var(--branco);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+
+.portfolio .imagem-projetos a {
+    position: absolute;
+    top: 358px;
+    left: 33px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--branco);
+    z-index: 1; 
+}
+
+.portfolio .color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--verde);
+    mix-blend-mode: color;
+}
