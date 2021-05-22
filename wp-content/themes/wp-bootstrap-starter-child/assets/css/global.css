@@ -94,7 +94,9 @@ body, html{
 /* Banner */
 header {
     background: var(--roxo);
+    height: 615px;
 }
+
 
 .banner-content {
     padding: 0;

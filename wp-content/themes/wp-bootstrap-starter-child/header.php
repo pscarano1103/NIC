@@ -22,6 +22,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
+    
+
     <!--header Wordpress-->
     <?php wp_head(); ?>
     <!--fecha header Wordpress-->

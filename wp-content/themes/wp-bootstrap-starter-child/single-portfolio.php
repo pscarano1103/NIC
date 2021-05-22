@@ -10,67 +10,62 @@
 
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <!--banner-->
-            <div id="banner">
+            <style type="text/css">
+                header {
+                    background: url("<?php the_field('imagem_banner') ?>");
+                }
+            </style>
+        </header>
+
+        <main>
+            <div id="nome_produto">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-12 titulo banner-content">                            
+                        <div class="col-md-12 titulo">
+                            <h1>
+                                <?php the_field('nome_produto'); ?>
+                                <div class="underbar"></div>
+                            </h1>
+                            
+                        </div>
 
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/elementos/elipse.svg" id="circle1" alt="">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/elementos/elipse.svg" id="circle2" alt="">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/elementos/dotted.svg" id="dotted1" alt="">
-                                <h1><?php the_title(); ?></h1>
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/elementos/dotted.svg" id="dotted2" alt="">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/elementos/dotted.svg" id="dotted3" alt="">
+                        <?php the_field('texto_produto'); ?>
+                    </div>
+                </div>
+            </div>
+            <div id="desafio">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-5">
+                            <div class="titulo">
+                                <h1>
+                                    <?php the_field('desafio'); ?>
+                                    <div class="underbar"></div>
+                                </h1>
+                            </div>
+                            <div class="texto">
+                                <?php the_field('texto_desafio'); ?>
+                            </div>
+                        </div>
 
+                        <div class="col-md-5" id="coluna_dois">
+                            <div class="titulo">
+                                <h1>
+                                    <?php the_field('solucao'); ?>
+                                    <div class="underbar"></div>
+                                </h1>
+                            </div>
+                            <div class="texto">
+                                <?php the_field('texto_solucao'); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--/banner-->
-        </header>
-
-        <main>
-            <div class="service">
+            <div class="imagem1">
                 <div class="container">
-
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-6">
-                            <div class="img-area">
-                                <img src="<?php the_field('imagem_subservico') ?>" alt="">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <?php the_field('conteudo_sub_servico') ?>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12-md">
-                            <div class="titulo">
-                                <h1>
-                                    <?php the_field('duvidas_frequentes') ?>
-                                </h1>
-                                <div class="underbar"></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row" id="duvidas">
-                        <div class="col-md-6">
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <p class="dropdown-item">Action</p>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-12 img-area">
+                        <img src="<?php the_field('img1') ?>" alt="">
                     </div>
                 </div>
             </div>

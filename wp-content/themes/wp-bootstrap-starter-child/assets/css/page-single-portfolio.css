@@ -1,0 +1,86 @@
+@import url(./main.css);
+
+.navbar-collapse {
+    align-self: end;
+}
+/*BANNER SERVIÇOS*/
+#banner .banner-content {
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 100px;
+}
+#banner .titulo h1 { 
+    font-weight: 900;
+    margin-top: 40px;
+    margin-bottom: 60px; 
+    margin-left: 70px;
+    text-transform: uppercase;
+}
+
+#logo {
+    width: 215px;
+    margin-top: -15px;
+}
+
+
+#nome_produto .titulo{
+    padding: 0;
+    margin-top: 140px;
+    margin-bottom: 40px;
+    color: var(--darkblue);
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+#nome_produto .titulo .underbar{
+    width: 27%;
+    margin-top: -15px;
+    margin-left: 33.3%;
+}
+
+
+#nome_produto p {
+    color: var(--darkblue);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    text-transform: lowercase;
+    text-align: justify;
+}
+
+#desafio .texto {
+    width: 460px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    text-transform: lowercase;
+    color: var(--darkblue);
+}
+
+#desafio .titulo{
+    padding: 0;
+    margin-top: 137px;
+    margin-bottom: 40px;
+    color: var(--darkblue);
+    letter-spacing: 0.5px;
+}
+
+#desafio .titulo .underbar{
+    width: 19.5%;
+    margin-top: -15px;
+}
+
+#desafio .container .row #coluna_dois {
+    margin-left: 220px;
+}
+
+#desafio {
+    margin-bottom: 140px;
+}
+
+.imagem1 img {
+    width: 100%;
+}

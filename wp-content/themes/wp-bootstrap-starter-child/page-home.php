@@ -137,14 +137,14 @@
                     </div>
                     <div class="img-area imagem-projetos imagem-position-segunda">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
-                        <button>Identidade visual</button>
-                        <a href="/nic/portfolio">Confira mais sobre esse projeto -></a>
+                        <button onclick="location.href='/nic/servicos1'">Identidade visual</button>
+                        <a href="/nic/portfolio" >Confira mais sobre esse projeto -></a>
                         <div class="color-overlay"></div>
                         <img src="<?php the_sub_field('imagem_projeto_dois') ?>" alt="">
                     </div>
                     <div class="img-area imagem-projetos imagem-position-terceira">
                         <h3>Natural TRID temperos naturais livres de transgênicos</h3>
-                        <button>Identidade visual</button>
+                        <button onclick="location.href='/nic/servicos1'">Identidade visual</button>
                         <a href="/nic/portfolio">Confira mais sobre esse projeto -></a>
                         <div class="color-overlay"></div>
                         <img src="<?php the_sub_field('imagem_projeto_tres') ?>" alt="">

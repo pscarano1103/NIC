@@ -35,6 +35,10 @@ main #patternDotted {
 
 
 /* Sticker */
+#sticker .container{
+    margin-top: -14px;
+    justify-content: end;
+}
 
 .sticker {   
     width: 385px;
@@ -45,17 +49,18 @@ main #patternDotted {
     color: var(--branco);
 }
 
-.sticker p {
+
+#sticker p {
     margin-top: 40px;
     margin-left: 30px;
 }
 
-.sticker span {
+#sticker span {
     margin-top: 20px;
     margin-left: 30px;
 }
 
-.sticker .underbar {
+#sticker .underbar {
     width: 218px;
     height: 6px;
     background: #392444;
@@ -198,6 +203,18 @@ main #patternDotted {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index: 1;
 }
+.projetos .imagem-projetos a {
+    position: absolute;
+    top: 477px;
+    left: 48px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--branco);
+    z-index: 1; 
+}
 
 .projetos .imagem-projetos button {
     position: absolute;
@@ -216,18 +233,15 @@ main #patternDotted {
     z-index: 1;
 }
 
-.projetos .imagem-projetos a {
-    position: absolute;
-    top: 477px;
-    left: 48px;
+.projetos .imagem-projetos button a {
     text-decoration: none;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
-    color: var(--branco);
-    z-index: 1; 
+    color: var(--branco); 
 }
+
 
 .projetos .imagem-position-principal {
     position:absolute;

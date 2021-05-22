@@ -21,7 +21,11 @@ function needed_styles_and_scripts_enqueue() {
     }
 
     if ( is_single() && 'servicos' == get_post_type() ){
-        wp_enqueue_style( 'page-service-sub', get_template_directory_uri() . '/assets/css/page-service-sub.css' );
+        wp_enqueue_style( 'page-service-sub', get_template_directory_uri() . '/assets/css/page-single-service.css' );
+    }
+
+    if ( is_single() && 'portfolio' == get_post_type() ){
+        wp_enqueue_style( 'page-single-potfolio', get_template_directory_uri() . '/assets/css/page-single-portfolio.css' );
     }
 
     if (is_page_template('page-portifolio.php')) {
