@@ -83,4 +83,39 @@
 
 .imagem1 img {
     width: 100%;
+    
+}
+
+.imagem1 {
+    margin-bottom: 140px;
+}
+
+#texto2 .texto {
+    width: 460px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    text-transform: lowercase;
+    color: var(--darkblue);
+}
+
+#texto2 .titulo{
+    padding: 0;
+    margin-bottom: 40px;
+    color: var(--darkblue);
+    letter-spacing: 0.5px;
+}
+
+#texto2 .titulo .underbar{
+    width: 52%;
+    margin-top: -15px;
+}
+
+#texto2 .img-area img {
+    width: 100%;
+}
+
+#texto2 {
+    margin-bottom: 140px;
 }
