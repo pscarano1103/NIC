@@ -296,7 +296,6 @@ main #patternDotted {
 #clientes .titulo {
     padding: 0;
     margin-top: 160px;
-    margin-bottom: 65px;
     color: var(--darkblue);
     letter-spacing: 0.5px;
     text-align: center;
@@ -310,7 +309,6 @@ main #patternDotted {
 
 #clientes .clientes-content p {
     width: 495px;
-    height: 210px;
     margin: auto;
     font-style: italic;
     font-weight: 800;
@@ -336,7 +334,9 @@ main #patternDotted {
     transform: rotate(-180deg);
 }
 
-
+#clientes {
+    margin-bottom: 160px;
+}
 
 /*Blog*/
 

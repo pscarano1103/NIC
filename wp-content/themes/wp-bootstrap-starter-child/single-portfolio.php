@@ -92,6 +92,60 @@
                     </div>
                 </div>
             </div>
+
+            <div id="imagens">
+                <div class="container">
+                    <div class="row">
+                        <?php if(have_rows('galeria')): while(have_rows('galeria')) : the_row(); ?>
+                            <div class="col-md-6 img1">
+                                <img src="<?php the_sub_field('galeria1') ?>" alt="">
+                            </div>
+
+                            <div class="col-md-6 imgs">
+                                <div class="row">
+                                    <div class="col-md-2 imagem_tres_colunas">
+                                        <img src="<?php the_sub_field('galeria2') ?>" alt="">
+                                    </div>
+                                    <div class="col-md-4 imagem_quatro_colunas">
+                                        <img src="<?php the_sub_field('galeria3') ?>" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="row imagem_sete_colunas">
+                                    <img src="<?php the_sub_field('galeria4') ?>" alt="">
+                                </div>
+                            </div>
+                        <?php endwhile; else : endif; ?>
+                    </div>
+                </div>
+            </div>
+
+            <div id="clientes">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 titulo">
+                        <h1>
+                            <?php the_field('titulo4') ?>
+                            <div class="underbar"></div>
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-6 clientes-content">
+                        <div class="aspas d-flex justify-content-start">
+                            <span id="abre">"</span>
+                        </div>
+                        <p>
+                            Adorei seu trabalho!
+                            Conseguiu me entregar exatamente o que eu queria. Adorei muito!
+                        </p>
+                        <div class="aspas d-flex justify-content-end">
+                            <span id="fecha">"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 <?php endwhile; else: endif; ?>
 <?php get_footer(); ?>
