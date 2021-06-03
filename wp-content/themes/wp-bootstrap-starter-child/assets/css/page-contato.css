@@ -29,3 +29,136 @@
     margin-top: -15px;
 }
 
+main .container{ 
+    margin-top: 70px;
+    margin-bottom: 140px;
+}
+
+/*Entre em contato*/
+.container .titulo {
+    padding: 0;
+    color: var(--darkblue);
+    letter-spacing: 0.5px;
+}
+
+.container .titulo .underbar {
+    width: 62%;
+    margin-top: -3%;
+}
+
+.container .conteudo {
+    padding: 0 15px;
+    width: 384px;
+    margin-top: 24px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    text-transform: lowercase;
+    color: #000000;
+}
+
+.container .telefone, .container .email {
+    flex-direction: row;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 15px;
+    margin-top: 51px;
+}
+
+.container .telefone img {
+    width: 53px;
+}
+
+.container .email img {
+    width: 57px;
+}
+
+.container .telefone p, .container .email p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+    text-transform: lowercase;
+    color: #000000;
+    margin-left: 42px;
+}
+
+.container .email {
+    margin-bottom: 60px;
+}
+
+/*Redes sociais*/
+
+.container .titulo2 .underbar {
+    width: 39%; 
+}
+.container .titulo2 {
+    margin-bottom: 30px;
+}
+
+.container .icones a img{
+    width: 30px;
+    height: 30px;
+    margin-right: 24px;
+}
+
+.container .icones a{
+    text-decoration: none;
+}
+
+.container .icones {
+    padding: 0 15px;
+    margin-bottom: 60px;
+}
+
+/*Proposta*/
+
+.container .titulo3 .underbar {
+    width: 39%; 
+}
+.container .titulo3{
+    margin-bottom: 40px;
+}
+
+
+
+.container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 294px;
+    height: 65px;
+    background: var(--verde);
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 23px;
+    color: var(--branco);
+    margin-left: 5px;
+}
+
+.container .button a {
+    text-decoration: none;
+}
+
+/*Formulario*/
+.container .formulario {
+    padding: 0;
+    background-color: var(--roxo);
+}
+
+.container form {
+    padding: 40px;
+}
+.container .tituloForm {
+    margin-top: 27px;
+    margin-bottom: 80px;
+    color: var(--branco);
+}
+
+.container .tituloForm .underbar {
+    width: 25%;
+    margin-top: -2%;
+}
