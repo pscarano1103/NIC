@@ -89,27 +89,28 @@
                 </div>
 
                 <div class="col-md-7 formulario">
+                    <div class="titulo tituloForm">
+                        <h1>
+                            <?php the_field('titulo_form') ?>
+                            <div class="underbar"></div>    
+                        </h1>
+                    </div>
+
                     <form>
-                        <div class="titulo tituloForm">
-                            <h1>
-                                <?php the_field('titulo_form') ?>
-                                <div class="underbar"></div>    
-                            </h1>
+                        <div class="input-field">
+                            <input type="text" name="nome" id="nome" placeholder="Nome">
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <div class="input-field">
+                            <input type="text" name="email" id="email" placeholder="E-mail">
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        <div class="input-field">
+                            <input type="text" name="telefone" id="telefone" placeholder="Telefone">
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <div class="input-field">
+                            <textarea name="mensagem" id="" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                        <button type="submit">Enviar</button>
                     </form>
                 </div>
             </div>

@@ -151,14 +151,63 @@ main .container{
 
 .container form {
     padding: 40px;
+    max-width: 520px;
 }
 .container .tituloForm {
+    padding: 40px;
     margin-top: 27px;
-    margin-bottom: 80px;
     color: var(--branco);
 }
 
 .container .tituloForm .underbar {
     width: 25%;
     margin-top: -2%;
+}
+
+form .input-field input {
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 520px;
+    height: 57px;
+    margin-bottom: 64px;
+    outline: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--branco);
+    padding: 0 10px;
+}
+
+form .input-field input::placeholder {
+    color: var(--branco);
+}
+
+form .input-field textarea {
+    background: transparent;
+    width: 520px;
+    color: var(--branco);
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--branco);
+    padding: 10px 0 0 10px;
+}
+form .input-field textarea::placeholder {
+    color: var(--branco);
+}
+form button {
+    margin-top: 48px;
+    padding: 21px 85px;
+    background: var(--verde);
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 23px;
+    color: var(--branco);
+    border-radius: 4px;
+    
 }
