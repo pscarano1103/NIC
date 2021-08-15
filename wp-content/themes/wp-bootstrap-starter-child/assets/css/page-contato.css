@@ -200,6 +200,7 @@ form .input-field textarea {
 form .input-field textarea::placeholder {
     color: var(--branco);
 }
+
 form button {
     margin-top: 48px;
     padding: 21px 85px;
@@ -209,5 +210,4 @@ form button {
     line-height: 23px;
     color: var(--branco);
     border-radius: 4px;
-    
 }
